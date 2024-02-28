@@ -10,7 +10,7 @@
 h1, p{
   width: 30%;
   position: relative;
-  top: 150px;
+  top: 50px;
   left: 200px;
 }
 
@@ -32,13 +32,13 @@ img{
   width: 30%;
   position: relative;
   left: 700px;
-  bottom: 100px;
+  bottom: 200px;
 }
 
 .body-input{
   position: relative;
   left: 200px;
-  bottom: 90px;
+  bottom: 200px;
   padding: 25px 200px;
   border: 0;
   outline: 0;
