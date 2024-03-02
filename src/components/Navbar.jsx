@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+
 
 const Navbar = () => {
+  const [isOpen, setisOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setisOpen(!isOpen);
+  };
   return (
     <Router>
-      <nav className="bg-slate-200 shadow-md p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="text-gray-900 text-xl font-bold">
-            Workbuddy
-          </Link>
-          <ul className="flex space-x-5">
+      <nav>
+        <div className="container hidden  md:flex ">
+          <ul className="flex space-x-5 nav">
             <li>
               <Link
                 to="/finder"
@@ -44,14 +48,11 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+        <div className="md:hidden">
+          <button onClick={toggleNavbar} className="object-right">{isOpen ? <X /> : <Menu />}</button>
+        </div>
       </nav>
-      <Routes>
-        <Route exact path="/" render={() => <div>Home Page</div>} />
-        <Route path="/finder" render={() => <div>Finder Page</div>} />
-        <Route path="/employer" render={() => <div>Employer Page</div>} />
-        <Route path="/login" render={() => <div>Login Page</div>} />
-        <Route path="/signup" render={() => <div>Sign up Page</div>} />
-      </Routes>
+      
     </Router>
   );
 };

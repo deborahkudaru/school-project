@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Header from "./Header";
 
 const Body = () => {
   return (
     <div className="bg-slate-200 w-full h-screen">
-      <Navbar />
+      <Header />
     </div>
   );
 };
