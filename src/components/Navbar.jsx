@@ -13,52 +13,54 @@ const Navbar = () => {
         >
           Workbuddy
         </Link>
-        <ul className="nav-links navbar">
-          <li>
-            <Link
-              to="/seekers"
-              style={{ textDecoration: " none", color: "black" }}
-            >
-              Find work
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/employers"
-              style={{ textDecoration: " none", color: "black" }}
-            >
-              Post a Job
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/application"
-              style={{ textDecoration: " none", color: "black" }}
-            >
-              Application
-            </Link>
-          </li>
-          <div className="login-signup">
+        <nav>
+          <ul className="nav-links navbar">
             <li>
               <Link
-                to="/login"
+                to="/seekers"
                 style={{ textDecoration: " none", color: "black" }}
-                className="login"
               >
-                Login
+                Find work
               </Link>
             </li>
             <li>
               <Link
-                to="/sign-up"
-                style={{ textDecoration: " none", color: "white" }}
-                className="signup"
+                to="/employers"
+                style={{ textDecoration: " none", color: "black" }}
               >
-                Sign up
+                Post a Job
               </Link>
             </li>
-          </div>
-        </ul>
+            <li>
+              <Link
+                to="/application"
+                style={{ textDecoration: " none", color: "black" }}
+              >
+                Application
+              </Link>
+            </li>
+            <div className="login-signup">
+              <li>
+                <Link
+                  to="/login"
+                  style={{ textDecoration: " none", color: "black" }}
+                  className="login"
+                >
+                  Login
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/sign-up"
+                  style={{ textDecoration: " none", color: "white" }}
+                  className="signup"
+                >
+                  Sign up
+                </Link>
+              </li>
+            </div>
+          </ul>
+        </nav>
       </div>
       <Routes>
         <Route exact path="/" render={() => <div>Home Page</div>} />
