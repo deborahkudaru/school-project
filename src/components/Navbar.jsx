@@ -1,81 +1,56 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import "../styles/Navbar.css";
-// import Container from 'react-bootstrap/Container';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Navbar = () => {
   return (
     <Router>
-      <div id="header">
-        <Link
-          to="/"
-          className="logo navbar-brand"
-          style={{ textDecoration: " none", color: "black" }}
-        >
-          Workbuddy
-        </Link>
-        <nav>
-          <ul className="nav-links navbar">
+      <nav className="bg-slate-200 shadow-md p-4">
+        <div className="container mx-auto flex justify-between items-center">
+          <Link to="/" className="text-gray-900 text-xl font-bold">
+            Workbuddy
+          </Link>
+          <ul className="flex space-x-5">
             <li>
               <Link
-                to="/seekers"
-                style={{ textDecoration: " none", color: "black" }}
+                to="/finder"
+                className="text-gray-600 hover:text-slate-950 transition duration-300 font-bold"
               >
-                Find work
+                Find
               </Link>
             </li>
             <li>
               <Link
-                to="/employers"
-                style={{ textDecoration: " none", color: "black" }}
+                to="/employer"
+                className="text-gray-600 hover:text-slate-950 transition duration-300 font-bold"
               >
-                Post a Job
+                Post
               </Link>
             </li>
             <li>
               <Link
-                to="/application"
-                style={{ textDecoration: " none", color: "black" }}
+                to="/login"
+                className="text-gray-700 hover:text-gray-600 transition duration-300 border-black border-2 px-4 py-2"
               >
-                Application
+                Login
               </Link>
             </li>
-            <div className="login-signup">
-              <li>
-                <Link
-                  to="/login"
-                  style={{ textDecoration: " none", color: "black" }}
-                  className="login"
-                >
-                  Login
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/sign-up"
-                  style={{ textDecoration: " none", color: "white" }}
-                  className="signup"
-                >
-                  Sign up
-                </Link>
-              </li>
-            </div>
+            <li>
+              <Link
+                to="/signup"
+                className="text-white bg-black hover:text-gray-600 transition duration-300 border-black border-2 px-4 py-2"
+              >
+                Sign Up
+              </Link>
+            </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
       <Routes>
         <Route exact path="/" render={() => <div>Home Page</div>} />
-        <Route path="/seekers" render={() => <div>Seekers Page</div>} />
-        <Route path="/employers" render={() => <div>Employers Page</div>} />
-        <Route
-          path="/application"
-          render={() => <div>Applications Page</div>}
-        />
+        <Route path="/finder" render={() => <div>Finder Page</div>} />
+        <Route path="/employer" render={() => <div>Employer Page</div>} />
         <Route path="/login" render={() => <div>Login Page</div>} />
-        <Route path="/sign-up" render={() => <div>Sign Up Page</div>} />
+        <Route path="/signup" render={() => <div>Sign up Page</div>} />
       </Routes>
     </Router>
   );
