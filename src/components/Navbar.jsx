@@ -1,18 +1,11 @@
-import React, { useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
-  const NavRef = useRef();
-
-  const showNavbar = () => {
-    NavRef.current.classList.toggle("responsive_nav");
-  };
-
   return (
     <Router>
-      <div>
+      <div id="header">
         <Link
           to="/"
           className="logo"
@@ -20,24 +13,32 @@ const Navbar = () => {
         >
           Workbuddy
         </Link>
-        <nav ref={NavRef}>
-          <ul className="nav-links">
-            <li>
-              <Link
-                to="/seekers"
-                style={{ textDecoration: " none", color: "black" }}
-              >
-                For Job seekers
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/employers"
-                style={{ textDecoration: " none", color: "black" }}
-              >
-                For employers
-              </Link>
-            </li>
+        <ul className="nav-links navbar">
+          <li>
+            <Link
+              to="/seekers"
+              style={{ textDecoration: " none", color: "black" }}
+            >
+              Find work
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/employers"
+              style={{ textDecoration: " none", color: "black" }}
+            >
+              Post a Job
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/application"
+              style={{ textDecoration: " none", color: "black" }}
+            >
+              Application
+            </Link>
+          </li>
+          <div className="login-signup">
             <li>
               <Link
                 to="/login"
@@ -56,19 +57,17 @@ const Navbar = () => {
                 Sign up
               </Link>
             </li>
-          </ul>
-          <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-            <FaTimes />
-          </button>
-        </nav>
-        <button className="nav-btn" onClick={showNavbar}>
-          <FaBars />
-        </button>
+          </div>
+        </ul>
       </div>
       <Routes>
         <Route exact path="/" render={() => <div>Home Page</div>} />
         <Route path="/seekers" render={() => <div>Seekers Page</div>} />
         <Route path="/employers" render={() => <div>Employers Page</div>} />
+        <Route
+          path="/application"
+          render={() => <div>Applications Page</div>}
+        />
         <Route path="/login" render={() => <div>Login Page</div>} />
         <Route path="/sign-up" render={() => <div>Sign Up Page</div>} />
       </Routes>
