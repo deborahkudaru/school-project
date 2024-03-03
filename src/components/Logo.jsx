@@ -6,8 +6,11 @@ const Logo = () => {
     <div>
       <Router>
         <Link to="/" className="text-gray-900 text-xl font-bold">
-          Logo
+          Workbuddy
         </Link>
+        <Routes>
+          <Route exact path="/" render={() => <div>Home Page</div>} />
+        </Routes>
       </Router>
     </div>
   );

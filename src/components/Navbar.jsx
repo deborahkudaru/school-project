@@ -64,6 +64,12 @@ const Navbar = () => {
           <NavLinks />
         </div>
       )}
+      <Routes>
+        <Route path="/finder" render={() => <div>Find Page</div>} />
+        <Route path="/employer" render={() => <div>Employ Page</div>} />
+        <Route path="/login" render={() => <div>Login Page</div>} />
+        <Route path="/signup" render={() => <div>Sign Up Page</div>} />
+      </Routes>
     </Router>
   );
 };
