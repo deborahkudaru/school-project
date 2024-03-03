@@ -6,7 +6,7 @@ const Logo = () => {
     <div>
       <Router>
         <Link to="/" className="text-gray-900 text-xl font-bold">
-          Workbuddy
+          Logo
         </Link>
       </Router>
     </div>
