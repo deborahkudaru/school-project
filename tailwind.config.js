@@ -7,6 +7,9 @@ module.exports = {
         Merriweather: ["Merriweather", "serif"],
         Montserrat: ["Montserrat", 'sans-serif'],
       },
+      backgroundImage: {
+        'man-standing': "url(/background-photo.jpg)",
+      },
     },
   },
   plugins: [],
