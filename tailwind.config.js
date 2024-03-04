@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Merriweather: ["Merriweather", "serif"],
+        Montserrat: ["Montserrat", 'sans-serif'],
       },
     },
   },
