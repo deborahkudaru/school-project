@@ -8,7 +8,7 @@ module.exports = {
         Montserrat: ["Montserrat", 'sans-serif'],
       },
       backgroundImage: {
-        'man-standing': "url(/background-photo.jpg)",
+        'man-standing': "url(./images/background-photo.jpg)",
       },
     },
   },
