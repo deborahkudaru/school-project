@@ -1,26 +1,20 @@
 const jobs = [
   {
     jobName: "Software Engineer",
-    jobDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    jobDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing.",
   },
-  // {
-  //   jobName: "",
-  //   jobDesc: "",
-  // },
-  // {
-  //   jobName: "",
-  //   jobDesc: "",
-  // },
-  // {
-  //   jobName: "",
-  //   jobDesc: "",
-  // },
-  // {
-  //   jobName: "",
-  //   jobDesc: "",
-  // },
-  // {
-  //   jobName: "",
-  //   jobDesc: "",
-  // },
+  {
+    jobName: "Hair Deisgner",
+    jobDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing",
+  },
+  {
+    jobName: "Lorem Ipsum",
+    jobDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing",
+  },
+  {
+    jobName: "Lorem Ipsum",
+    jobDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing",
+  },
 ]
+
+export default jobs;
