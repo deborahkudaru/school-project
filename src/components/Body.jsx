@@ -3,7 +3,7 @@ import Header from "./Header";
 
 const Body = () => {
   return (
-    <div className="lg:bg-slate-200 w-full h-screen bg-man-standing bg-cover bg-slate-200 bg-blend-overlay bg-opacity-20 bg-no-repeat lg:bg-none">
+    <div className="lg:bg-zinc-200 w-full h-screen bg-man-standing bg-cover bg-zinc-200 bg-blend-overlay bg-opacity-20 bg-no-repeat lg:bg-none">
       <Header />
       <div className="lg:relative lg:left-40 lg:top-32 relative left-20 top-32 ">
         <h1 className="text-4xl w-1/2 lg:w-1/3 font-semibold font-Merriweather lg:text-6xl">
@@ -20,8 +20,11 @@ const Body = () => {
           alt="a man holding a phone"
         />
       </div>
-      <div className="bg-white lg:w-1/2 lg:py-5 lg:relative lg:bottom-20 lg:left-12 w-1/2 relative top-40 left-20 py-3">
-        <input type="text" />
+      
+      <div className="bg-white w-1/2 relative  py-3 rounded-sm lg:relative lg:bottom-28 lg:left-40">
+        <input type="text" placeholder="search for a job" className="ml-10"/>
+        <input type="text" placeholder="Location" />
+        <button className="bg-black font-normal text-white py-1 px-2 justify-end">Search</button>
       </div>
     </div>
   );

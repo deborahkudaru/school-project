@@ -4,13 +4,13 @@ import { Menu, X } from "lucide-react";
 
 const NavLinks = () => {
   return (
-    <ul className="flex space-x-5 nav">
+    <ul className="flex space-x-5 nav pr-20">
       <li>
         <Link
           to="/finder"
           className="text-gray-600 hover:text-slate-950 transition duration-300 font-bold"
         >
-          Find
+          Find Job
         </Link>
       </li>
       <li>
@@ -18,7 +18,7 @@ const NavLinks = () => {
           to="/employer"
           className="text-gray-600 hover:text-slate-950 transition duration-300 font-bold"
         >
-          Post
+          Post Job
         </Link>
       </li>
       <li>
