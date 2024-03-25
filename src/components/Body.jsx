@@ -1,32 +1,53 @@
 import React from "react";
-import Header from "./Header";
+import image from "../images/image.jpg";
+import Brands from "./Brands";
+import { BsStars } from "react-icons/bs";
+import { FaPlayCircle } from "react-icons/fa";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const Body = () => {
   return (
-    <div className="h-screen bg-man-standing bg-cover bg-zinc-200 bg-blend-overlay bg-opacity-20 bg-no-repeat lg:bg-none">
-      <Header />
-      <div className="lg:relative lg:left-40 lg:top-32 relative left-20 top-32 ">
-        <h1 className="text-4xl w-1/2 lg:w-1/3 font-semibold font-Merriweather lg:text-6xl">
-          Find the right job, your way
-        </h1>
-        <p className="w-1/2 mt-5 font-Montserrat text-xs text-justify items-center font-semibold lg:w-1/3 lg:text-lg lg:font-medium">
-          No skill? No problem. We provide jobs from unskilled to skilled
-          people. Search for a job suitable for you and apply now.
-        </p>
+    <div className="px-48 pt-20 pb-5 bg-sky-100">
+      <div className="flex">
+        <div>
+          <h1 className="text-5xl font-extrabold leading-tight pb-4">
+            <span className="text-gray-200 bg-violet-400 px-2 py-1 rounded-lg">
+              WE HELP
+            </span>{" "}
+            YOU FIND YOUR <span className="text-violet-400">DREAM JOB</span>
+          </h1>
+          <p className="text-slate-500 font-medium w-4/5">
+            Each month, more than 3 million job seekers turn to website in their
+            search for work, making over 140,000 applications every single day
+          </p>
+        </div>
+
+        <img className="w-96  rounded-2xl" src={image} alt="" />
       </div>
-      <div className="lg:relative lg:left-1/2 lg:bottom-24 lg:visible lg:block hidden">
-        <img
-          src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvbGRpbmclMjBhJTIwcGhvbmV8ZW58MHx8MHx8fDA%3D"
-          alt="a man holding a phone"
-        />
-      </div>
-      
-      <div className="bg-white w-1/2 relative  py-3 rounded-sm lg:relative lg:bottom-28 lg:left-40">
-        <input type="text" placeholder="search for a job" className="ml-10"/>
-        <input type="text" placeholder="Location" />
-        <button className="bg-black font-normal text-white py-1 px-2 justify-end">Search</button>
-      </div>
-      <h3 className="text-2xl w-1/2 lg:w-1/3 font-semibold font-Merriweather lg:text-4xl pt-5 pl-40">See Open Jobs</h3>
+      <BsStars className="relative bottom-44 left-1/2 text-8xl" />
+
+      <Router>
+        <div className="flex gap-3 relative bottom-28">
+          <Link className="text-sky-100 bg-violet-400 px-20 py-3  font-semibold text-sm rounded-md">
+            Search Job{" "}
+          </Link>
+
+          <Link className="text-slate-600 border-slate-600 font-semibold border-2 px-12 py-3 text-sm rounded-md">
+           How to apply
+          </Link>
+          <FaPlayCircle className="text-slate-900 relative right-44 top-4 text-lg" /> 
+        </div>
+
+        <Routes>
+          <Route path="/search" render={() => <div>Book Page</div>} />
+          <Route
+            path="/how-to-apply"
+            render={() => <div>How To Apply Page</div>}
+          />
+        </Routes>
+      </Router>
+
+      <Brands />
     </div>
   );
 };
