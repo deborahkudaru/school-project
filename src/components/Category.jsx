@@ -49,7 +49,7 @@ const Category = () => {
           </Link>
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex gap-4 pt-5">
           <Link to="/" className="">
             <div className="bg-white flex py-6 px-6 gap-5 border-2 border-slate-100 rounded">
               <TfiWrite className="bg-violet-400  p-3 rounded text-6xl text-white" />
@@ -87,7 +87,7 @@ const Category = () => {
           </Link>
         </div>
 
-        <div className="flex gap-4 mb-10">
+        <div className="flex gap-4 mb-10 pt-5">
           <Link to="/" className="">
             <div className="bg-white flex py-6 px-6 gap-5 border-2 border-slate-100 rounded">
               <BsDatabaseGear className="bg-violet-400  p-3 rounded text-6xl text-white" />
@@ -127,7 +127,7 @@ const Category = () => {
 
         <Link
           to="/explore"
-          className="text-sky-100 bg-violet-400 px-10 py-3  font-semibold text-sm rounded-md"
+          className="text-sky-100 bg-violet-400 px-10 py-3  font-semibold text-sm rounded-md relative ml-14 left-1/3"
         >
           Explore More
         </Link>

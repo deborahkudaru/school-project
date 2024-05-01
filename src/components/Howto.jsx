@@ -35,7 +35,7 @@ const Howto = () => {
 
               <h4 className="text-xl pt-5 font-bold">Create Resume</h4>
               <p className="text-slate-500 font-medium">
-                Secons, create a resume to your job
+                Second, create a resume to your job
               </p>
 
               <h4 className="text-xl pt-5 font-bold">Find Job</h4>

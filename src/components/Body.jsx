@@ -33,9 +33,9 @@ const Body = () => {
           </Link>
 
           <Link className="text-slate-600 border-slate-600 font-semibold border-2 px-12 py-3 text-sm rounded-md">
-           How to apply
+            How to apply
           </Link>
-          <FaPlayCircle className="text-slate-900 relative right-44 top-4 text-lg" /> 
+          <FaPlayCircle className="text-slate-900 relative right-44 top-4 text-lg" />
         </div>
 
         <Routes>
