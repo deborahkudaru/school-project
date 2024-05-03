@@ -17,7 +17,6 @@ const FindTalent = (props) => {
           </Routes>
         </Router>
       </div>
-0-
       <div className="px-5 pt-5 border-2 border-slate-200 bg-white">
         <img src={pro} alt="" className="w-64" />
         <p className="text-xs font-bold text-slate-600 bg-white relative bottom-72 left-52 w-7 px-5 rounded">
