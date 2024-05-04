@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const Category = () => {
   return (
-    <div className="px-48 pt-16 bg-teal-50">
+    <div className="px-48 pt-16 bg-gray-50">
       <Router>
         <div className="flex gap-4">
           <Link to="/" className="">
@@ -135,6 +135,20 @@ const Category = () => {
           <Route exact path="/" render={() => <div>Home Page</div>} />
         </Routes>
       </Router>
+
+      <div>
+        <div className=" pb-10">
+          <h2 className="text-4xl font-bold mt-28">Find The Best Talent</h2>
+          <Router>
+            <Link className="text-white px-10 py-3 bg-violet-400  font-semibold text-sm rounded-md relative left-3/4 bottom-5 ml-20 ">
+              Find More
+            </Link>
+            <Routes>
+              <Route path="/find-more" render={() => <div>Fine more</div>} />
+            </Routes>
+          </Router>
+        </div>
+      </div>
     </div>
   );
 };

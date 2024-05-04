@@ -1,25 +1,13 @@
 import React from "react";
-import pro from "../pro.jpg";
+// import pro from "../pro.jpg";
 import { FaStar } from "react-icons/fa";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const FindTalent = (props) => {
   return (
-    <div className="px-48 bg-teal-50">
-      <div className="flex justify-between pb-10">
-        <h2 className="text-4xl font-bold mt-28">Find The Best Talent</h2>
-        <Router>
-          <Link className="text-black px-10 py-3  font-semibold text-sm rounded-md">
-            Find More
-          </Link>
-          <Routes>
-            <Route path="/find-more" render={() => <div>Fine more</div>} />
-          </Routes>
-        </Router>
-      </div>
-      <div className="px-5 pt-5 border-2 border-slate-200 bg-white">
-        <img src={pro} alt="" className="w-64" />
-        <p className="text-xs font-bold text-slate-600 bg-white relative bottom-72 left-52 w-7 px-5 rounded">
+    <div className="bg-gray-50">
+      <div className="px-5 pt-5 border-2 border-slate-100 bg-white">
+        <img src={props.image} alt="" className="w-64 pb-4" />
+        <p className="text-xs font-bold text-slate-600 bg-white relative left-52 w-7 px-5 rounded">
           <FaStar className="relative right-4 top-3 text-yellow-400" />{" "}
           {props.rate}
         </p>

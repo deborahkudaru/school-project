@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const Begin = () => {
   return (
-    <div className="px-48 pt-10 bg-teal-50 pb-10">
+    <div className="px-48 pt-10 bg-gray-50 pb-10">
       <div className="flex gap-10">
         <img src={picture} alt="normal-stuff" className="w-1/2" />
         <div>

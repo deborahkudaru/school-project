@@ -1,18 +1,29 @@
 import React from "react";
+import { FaStar } from "react-icons/fa";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Review = (props) => {
+  
   return (
-    <div className="px-48 bg-teal-50">
-      <h2 className="text-4xl font-bold pt-28 text-center pb-10">
-        See What They Say About Us
-      </h2>
-      <div className="bg-white hover:bg-violet-400 w-1/3 font-semibold hover:text-white py-10 px-6">
-        <p className="text-xl pb-3">{props.name}</p>
+    <div className=" bg-gray-50">
+      <div className="bg-violet-400 font-semibold text-white pb-10 pt-5 px-6 rounded-tl-3xl rounded-br-3xl shadow-inner">
+        <div className="pb-2">
+          <img src={props.image} alt="" className="float-left w-12 mr-3 rounded-full"/>
+          <p className="text-xl">{props.name}</p>
+          <p className="flex gap-1 pb-3 text-yellow-400">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+          </p>
+        </div>
         <p>{props.rating}</p>
-        <p className="text-slate-500">{props.review}</p>
-        <p className="text-xs text-slate-500 hover:text-white pt-7">{props.date}</p>
+        <p className=" text-white">{props.review}</p>
+        <p className="text-xs font-normal text-white pt-7">{props.date}</p>
       </div>
-      <img src={props.image} alt="" />
     </div>
   );
 };
