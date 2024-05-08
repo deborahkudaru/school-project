@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Logo from './Logo';
 
-const Login  = () => {
+const Apply = () => {
   return (
-    <div></div>
+    <div>
+      <Logo />
+      <h2>Login To Workbuddy</h2>
+      <input type="
+      " />
+    </div>
   )
 }
 
-export default Login 
+export default Apply

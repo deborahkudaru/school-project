@@ -6,6 +6,7 @@ const Footer = () => {
     <div>
       <p>
         <MdOutlineCopyright />
+        2024 Job Portal. All Rights Reserved.
       </p>
     </div>
   );
