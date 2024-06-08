@@ -1,5 +1,7 @@
 import React from "react";
 import Logo from "./Logo";
+import SignUp from "./SignUp"
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const Apply = () => {
   return (
@@ -12,7 +14,12 @@ const Apply = () => {
       <button>Continue with Google</button>
       <button>Continue with Apple</button>
       <p>Don't have a WorkBuddy account?</p>
-      <a href="">Sign Up</a>
+      <Router>
+        <Link to="/signup">Sign Up</Link>
+        <Routes>
+          <Route path="/signup" component={SignUp}/>
+        </Routes>
+      </Router>
     </div>
   );
 };
