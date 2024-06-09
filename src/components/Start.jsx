@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Start = () => {
   return (
@@ -11,26 +11,17 @@ const Start = () => {
         reprehenderit eligendi cumque hic! Repudiandae, quam. Nobis commodi
         autem voluptatum quos minus!
       </p>
-      <Router>
-        <div className="flex gap-3 relative bottom-28">
-          <Link className="text-sky-100 bg-violet-400 px-20 py-3  font-semibold text-sm rounded-md">
-            Search Job{" "}
-          </Link>
 
-          <Link className="text-slate-600 border-slate-600 font-semibold border-2 px-12 py-3 text-sm rounded-md">
-            How to apply
-          </Link>
-          <FaPlayCircle className="text-slate-900 relative right-44 top-4 text-lg" />
-        </div>
+      <div className="flex gap-3 relative bottom-28">
+        <Link className="text-sky-100 bg-violet-400 px-20 py-3  font-semibold text-sm rounded-md">
+          Search Job{" "}
+        </Link>
 
-        <Routes>
-          <Route path="/search" render={() => <div>Book Page</div>} />
-          <Route
-            path="/how-to-apply"
-            render={() => <div>How To Apply Page</div>}
-          />
-        </Routes>
-      </Router>
+        <Link className="text-slate-600 border-slate-600 font-semibold border-2 px-12 py-3 text-sm rounded-md">
+          How to apply
+        </Link>
+        <FaPlayCircle className="text-slate-900 relative right-44 top-4 text-lg" />
+      </div>
     </div>
   );
 };

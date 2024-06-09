@@ -1,55 +1,60 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-// import { BiMenuAltRight } from "react-icons/bi";
-// import { CiMenuFries } from "react-icons/ci";
+import { Link } from "react-router-dom";
 import { RiMenu3Fill } from "react-icons/ri";
 import { X } from "lucide-react";
-import Login from "./Login ";
 
 const NavLinks = () => {
   return (
-      <ul className="flex space-x-12 nav  font-medium ">
-        <li>
-          <Link
-            to="/"
-            className="text-slate-500  hover:text-slate-950 transition duration-300"
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/category"
-            className="text-slate-500 hover:text-slate-950 transition duration-300"
-          >
-            Category
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/apply"
-            className="text-slate-500 hover:text-slate-950 transition duration-300"
-          >
-            Apply
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/about"
-            className="text-slate-500 hover:text-slate-950 transition duration-300"
-          >
-            About us
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/login"
-            className="text-slate-900 transition duration-300 ml-10 border-slate-900 rounded-lg border-2 px-8 py-2"
-          >
-            Login
-          </Link>
-        </li>
-      </ul>
+    <ul className="flex space-x-12 nav  font-medium ">
+      <li>
+        <Link
+          to="/"
+          className="text-slate-500  hover:text-slate-950 transition duration-300"
+        >
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/category"
+          className="text-slate-500 hover:text-slate-950 transition duration-300"
+        >
+          Category
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/apply"
+          className="text-slate-500 hover:text-slate-950 transition duration-300"
+        >
+          Apply
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/about"
+          className="text-slate-500 hover:text-slate-950 transition duration-300"
+        >
+          About us
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/login"
+          className="text-slate-900 transition duration-300 ml-10 border-slate-900 rounded-lg border-2 px-8 py-2"
+        >
+          Login
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/signup"
+          className="text-slate-900 transition duration-300 ml-10 border-slate-900 rounded-lg border-2 px-8 py-2"
+        >
+          SignUp
+        </Link>
+      </li>
+    </ul>
   );
 };
 
@@ -60,7 +65,7 @@ const Navbar = () => {
     setisOpen(!isOpen);
   };
   return (
-    <Router>
+    <>
       <nav>
         <div className="w-full justify-between hidden  md:flex">
           <NavLinks />
@@ -107,13 +112,7 @@ const Navbar = () => {
           </li>
         </ul>
       )}
-      <Routes>
-        <Route path="/finder" render={() => <div>Find Page</div>} />
-        <Route path="/employer" render={() => <div>Employ Page</div>} />
-        <Route path="/login" element={Login} />
-        <Route path="/signup" render={() => <div>Sign Up Page</div>} />
-      </Routes>
-    </Router>
+    </>
   );
 };
 
