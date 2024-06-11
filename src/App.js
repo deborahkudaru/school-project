@@ -7,6 +7,7 @@ import SignUp from "./pages/SignUp";
 import Footer from "./components/Footer";
 import Workersignup from "./pages/Workersignup";
 import Employersignup from "./pages/Employersignup";
+import About from "./pages/About";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Body />} />
+        <Route path="/about" element={<About />} />
         {/* <Route path="/finder" element={<Find />} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

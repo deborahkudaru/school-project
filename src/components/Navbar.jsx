@@ -24,7 +24,7 @@ const NavLinks = () => {
       </li>
       <li>
         <Link
-          to="/apply"
+          to="/worker-signup"
           className="text-slate-500 hover:text-slate-950 transition duration-300"
         >
           Apply
