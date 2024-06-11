@@ -4,6 +4,9 @@ import Body from "./components/Body";
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login ";
 import SignUp from "./pages/SignUp";
+import Footer from "./components/Footer";
+import Workersignup from "./pages/Workersignup";
+import Employersignup from "./pages/Employersignup";
 
 const App = () => {
   return (
@@ -15,11 +18,14 @@ const App = () => {
         <Route path="/" element={<Body />} />
         {/* <Route path="/finder" element={<Find />} /> */}
         <Route path="/login" element={<Login />} />
-        <Route path="signup" element={<SignUp />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/worker-signup" element={<Workersignup />} />
+        <Route path="/employer-signup" element={<Employersignup />} />
         {/* <Route path="/search" element={<Find />} /> */}
         {/* <Route path="/how-to-apply" element={<HowToApply />} /> */}
         {/* <Route path="/talent" /> */}
       </Routes>
+      <Footer />
     </div>
   );
 };

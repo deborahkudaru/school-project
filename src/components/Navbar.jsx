@@ -49,7 +49,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/signup"
-          className="text-slate-900 transition duration-300 ml-10 border-slate-900 rounded-lg border-2 px-8 py-2"
+          className="text-sky-100 transition duration-300 bg-violet-400 rounded-lg border-2 px-8 py-3"
         >
           SignUp
         </Link>

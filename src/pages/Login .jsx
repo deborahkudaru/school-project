@@ -6,9 +6,9 @@ import { FaGoogle } from "react-icons/fa";
 
 const Apply = () => {
   return (
-    <div className="px-48 pt-6 bg-gray-50">
+    <div className="px-48 pt-6 bg-gray-50 mb-10">
       <Logo />
-      <div className="mt-32 border-2 border-slate-200 w-1/2 text-center m-auto py-14 rounded-xl">
+      <div className="mt-16 border-2 border-slate-200 w-1/2 text-center m-auto py-14 rounded-xl">
         <h2 className="text-2xl font-semibold">Login To Workbuddy</h2>
         <input
           type="text"
@@ -20,12 +20,12 @@ const Apply = () => {
         </button>
         <p>or</p>
         <div className="flex flex-col gap-3 mt-5">
-          <button className="bg-blue-500 text-gray-50 font-semibold w-2/3 m-auto py-2 rounded-lg">
-            <FaGoogle />
+          <button className="bg-blue-500 text-gray-50 font-semibold w-2/3 m-auto pb-3 rounded-lg">
+            <FaGoogle className="relative top-5 left-14 text-rose-500" />
             Continue with Google
           </button>
-          <button className="border-2 border-black w-2/3 m-auto font-semibold py-2 rounded-lg mt-2">
-            <FaApple />
+          <button className="border-2 border-black w-2/3 m-auto font-semibold pb-3 rounded-lg mt-2">
+            <FaApple className="relative top-5 left-14"/>
             Continue with Apple
           </button>
         </div>

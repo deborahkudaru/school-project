@@ -57,31 +57,7 @@ const Body = () => {
       <Howto />
       <Category />
       <div className="px-48 bg-gray-50">
-        <div className="flex gap-7 pb-5">
-          <FindTalent
-            image={talent[0].imageUrl}
-            rate={talent[0].rating}
-            job={talent[0].job}
-            name={talent[0].name}
-            age={talent[0].age}
-          />
-          <FindTalent
-            image={talent[0].imageUrl}
-            rate={talent[0].rating}
-            job={talent[0].job}
-            name={talent[0].name}
-            age={talent[0].age}
-          />
-          <FindTalent
-            image={talent[0].imageUrl}
-            rate={talent[0].rating}
-            job={talent[0].job}
-            name={talent[0].name}
-            age={talent[0].age}
-          />
-        </div>
-
-        <div className="flex gap-5">
+        <div className="flex gap-10 pb-5">
           <FindTalent
             image={talent[0].imageUrl}
             rate={talent[0].rating}
