@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { CgProfile } from "react-icons/cg";
 
-const Logo = () => {
+const Logo1 = () => {
   return (
     <div>
       <Link
@@ -10,8 +11,9 @@ const Logo = () => {
       >
         Work<span className="text-violet-400">buddy</span>
       </Link>
+      <CgProfile />
     </div>
   );
 };
 
-export default Logo;
+export default Logo1;

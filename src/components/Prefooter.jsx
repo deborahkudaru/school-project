@@ -11,7 +11,7 @@ const Prefooter = () => {
           <div className="border-2 border-slate-400 rounded-lg mt-5 px-5 pb-3">
             <FaMagnifyingGlass className="relative top-6 left-3"/>
             <input
-              type="text"
+              type="email"
               placeholder="Email address"
               className="px-10 bg-sky-100 border-0 outline-none"
             />
