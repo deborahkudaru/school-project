@@ -4,9 +4,7 @@ import Brands from "./Brands";
 import Howto from "./Howto";
 import Category from "./Category";
 import FindTalent from "./FindTalent";
-import talent from "../Talent";
 import Review from "./Review";
-import review from "../Review";
 import Begin from "./Begin";
 import Prefooter from "./Prefooter";
 import Header from "./Header"
@@ -52,62 +50,15 @@ const Body = () => {
         </>
         <Brands />
       </div>
-
-      
       <Howto />
       <Category />
-      <div className="px-48 bg-gray-50">
-        <div className="flex gap-10 pb-5">
-          <FindTalent
-            image={talent[0].imageUrl}
-            rate={talent[0].rating}
-            job={talent[0].job}
-            name={talent[0].name}
-            age={talent[0].age}
-          />
-          <FindTalent
-            image={talent[0].imageUrl}
-            rate={talent[0].rating}
-            job={talent[0].job}
-            name={talent[0].name}
-            age={talent[0].age}
-          />
-          <FindTalent
-            image={talent[0].imageUrl}
-            rate={talent[0].rating}
-            job={talent[0].job}
-            name={talent[0].name}
-            age={talent[0].age}
-          />
-        </div>
-      </div>
-
+      <FindTalent />
       <div className="px-48 bg-gray-50">
         <h2 className="text-4xl font-bold pt-28 text-center pb-10">
           See What They Say About Us
         </h2>
-        <div className="flex gap-4">
-          <Review
-            image={review[0].imageUrl}
-            name={review[0].name}
-            review={review[0].review}
-            date={review[0].date}
-          />
-          <Review
-            image={review[1].imageUrl}
-            name={review[1].name}
-            review={review[1].review}
-            date={review[1].date}
-          />
-          <Review
-            image={review[2].imageUrl}
-            name={review[2].name}
-            review={review[2].review}
-            date={review[2].date}
-          />
-        </div>
+       <Review />
       </div>
-
       <Begin />
       <Prefooter />
     </div>

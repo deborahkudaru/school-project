@@ -1,4 +1,4 @@
-const review =[
+const reviews =[
   {
     imageUrl: "https://i.pinimg.com/236x/f2/2c/8c/f22c8c5cf59fe5faf9d466e69cde0ee1.jpg",
     name: "Howard Brown",
@@ -20,4 +20,4 @@ const review =[
   
 ]
 
-export default review;
+export default reviews;

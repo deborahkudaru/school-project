@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Begin = () => {
   return (
-    <div className="px-48 pt-10 bg-gray-50 pb-10">
+    <div className="px-48 pt-40 bg-gray-50 pb-20">
       <div className="flex gap-10">
         <img src={picture} alt="normal-stuff" className="w-1/2" />
         <div>
@@ -20,14 +20,14 @@ const Begin = () => {
           
           <div className="flex gap-3">
             <Link
-              to="/finder"
+              to="/worker-signup"
               className="text-sky-100 bg-violet-400 px-10 py-3  font-semibold text-sm rounded-md"
             >
               Find A Job{" "}
             </Link>
 
             <Link
-              to="/employ"
+              to="/employer-signup"
               className="text-slate-600 border-slate-600 font-semibold border-2 px-8 py-3 text-sm rounded-md"
             >
               Find A Talent
