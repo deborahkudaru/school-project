@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 // import Header from "./components/Header";
 import Body from "./components/Body";
 import { Routes, Route } from "react-router-dom";
@@ -13,17 +13,17 @@ import ManualProfile from "./pages/ManualProfile";
 
 const App = () => {
 
-  const [backendData, setBackendData] = useState([{}])
+  // const [backendData, setBackendData] = useState([{}])
 
-  useEffect(() => {
-    fetch("/api").then(
-      response => response.json()
-    ).then(
-      data => {
-        setBackendData(data)
-      }
-    )
-  }, []) 
+  // useEffect(() => {
+  //   fetch("/api").then(
+  //     response => response.json()
+  //   ).then(
+  //     data => {
+  //       setBackendData(data)
+  //     }
+  //   )
+  // }, []) 
 
   return (
     <div>
