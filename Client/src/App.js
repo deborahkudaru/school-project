@@ -9,6 +9,7 @@ import Workersignup from "./pages/Workersignup";
 import Employersignup from "./pages/Employersignup";
 import About from "./pages/About";
 import ManualProfile from "./pages/ManualProfile";
+import Dashboard from "./pages/Dashboard";
 
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/worker-signup" element={<Workersignup />} />
         <Route path="/employer-signup" element={<Employersignup />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         {/* <Route path="/search" element={<Find />} /> */}
         {/* <Route path="/how-to-apply" element={<HowToApply />} /> */}
         {/* <Route path="/talent" /> */}
