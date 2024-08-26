@@ -6,13 +6,15 @@ import google from "../images/google.png";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../Firebase";
 import { setDoc, doc } from "firebase/firestore";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const Employersignup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [Fname, setFname] = useState("");
   const [Lname, setLname] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [gender, setGender] = useState("");
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -25,13 +27,13 @@ const Employersignup = () => {
           email: user.email,
           firstName: Fname,
           lastName: Lname,
+          phoneNumber: phoneNumber,
         });
       }
       console.log("user registered successfully");
-      toast.success("User registered successfully", { position: "top-center" });
+      window.location.href = "/profile";
     } catch (error) {
       console.log(error.message);
-      toast.success(error.message, { position: "bottom-center" });
     }
   };
 
@@ -91,6 +93,16 @@ const Employersignup = () => {
             </div>
           </div>
           <div className="flex flex-col">
+            <div className="flex flex-col pb-6">
+              <label htmlFor="phoneNumber">Phone Number</label>
+              <input
+                type="phoneNumber"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                required
+                className="border border-slate-400 rounded-xl py-2 outline-0 px-6"
+              />
+            </div>
             <div className="flex flex-col pb-6">
               <label htmlFor="email">Work Email Address</label>
               <input

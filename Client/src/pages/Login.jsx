@@ -5,38 +5,29 @@ import { FaApple } from "react-icons/fa";
 import google from "../images/google.png";
 import { FaRegUser } from "react-icons/fa";
 import { FiLock } from "react-icons/fi";
-import auth from "../Firebase";
-import { 
-  // createUserWithEmailAndPassword, 
-  signInWithEmailAndPassword
- } from "firebase/auth";
-
+// import auth from "../Firebase";
+import { auth } from "../Firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
+// import { toast } from "react-toastify";
+// import { redirect } from "react-router-dom";
 
 const Apply = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const logIn = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log(userCredential);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      console.log("user logged in successfully");
+      window.location.href = "/profile"
+
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
-  // const handleRegister = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     await createUserWithEmailAndPassword (auth, email, password);
-  //     const user = auth.currentUser;
-  //     console.log(user);
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // };
+  
 
   return (
     <div className="px-48 pt-6 bg-gray-50 pb-10">
@@ -44,7 +35,7 @@ const Apply = () => {
       <div className="mt-16 border border-slate-500 w-1/2 text-center m-auto py-14 rounded-xl">
         <h2 className="text-2xl font-semibold">Login To Workbuddy</h2>
 
-        <form action="" onSubmit={logIn}>
+        <form action="" onSubmit={handleLogin}>
           <div className="border-2 border-slate-200 bg-gray-50 px-1 rounded-lg pb-3 mt-5 w-2/3 m-auto">
             <FaRegUser className="relative left-7 top-5" />
             <input

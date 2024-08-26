@@ -6,7 +6,7 @@ import person3 from "../images/michael-dam-mEZ3PoFGs_k-unsplash.jpg";
 
 const talents = [
   {
-    imageUrl: person1,
+    imageUrl: person2,
     rating: "4.3",
     job: "Photographer",
     name: "Justine Cloud",
@@ -17,14 +17,14 @@ const talents = [
     rating: "4.3",
     job: "Photographer",
     name: "Justine Cloud",
-    age: "25 Years Old",
+    age: "23 Years Old",
   },
   {
     imageUrl: person3,
     rating: "4.3",
     job: "Photographer",
     name: "Justine Cloud",
-    age: "25 Years Old",
+    age: "26 Years Old",
   },
 ];
 

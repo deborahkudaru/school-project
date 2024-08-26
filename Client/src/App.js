@@ -1,8 +1,7 @@
-import React from "react";
-// import Header from "./components/Header";
+import React, { useEffect, useState } from "react";
 import Body from "./components/Body";
-import { Routes, Route } from "react-router-dom";
-import Login from "./pages/Login ";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Footer from "./components/Footer";
 import Workersignup from "./pages/Workersignup";
@@ -10,10 +9,13 @@ import Employersignup from "./pages/Employersignup";
 import About from "./pages/About";
 import ManualProfile from "./pages/ManualProfile";
 import Dashboard from "./pages/Dashboard";
-
+import { ToastContainer } from "react-toastify";
+import Profile from "./pages/Profile";
+import Home from "./pages/Home";
+import { auth } from "./Firebase";
+import WorkerProfile from "./pages/WorkerProfile";
 
 const App = () => {
-
   // const [backendData, setBackendData] = useState([{}])
 
   // useEffect(() => {
@@ -24,28 +26,31 @@ const App = () => {
   //       setBackendData(data)
   //     }
   //   )
-  // }, []) 
+  // }, [])
+
+  const [user, setUser] = useState();
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      setUser(user);
+    });
+  });
 
   return (
     <div>
-      
-      {/* <Header /> */}
-      {/* <Body /> */}
-
       <Routes>
         <Route path="/" element={<Body />} />
         <Route path="/about" element={<About />} />
         <Route path="/create-manually" element={<ManualProfile />} />
-        {/* <Route path="/finder" element={<Find />} /> */}
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={user ? <Navigate to="/profile" /> : <Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/worker-signup" element={<Workersignup />} />
         <Route path="/employer-signup" element={<Employersignup />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        {/* <Route path="/search" element={<Find />} /> */}
-        {/* <Route path="/how-to-apply" element={<HowToApply />} /> */}
-        {/* <Route path="/talent" /> */}
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/worker-profile" element={<WorkerProfile />} />
       </Routes>
+      <ToastContainer />
       <Footer />
     </div>
   );

@@ -1,6 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import categories from "../Category.js";
+import { FaCamera } from "react-icons/fa";
+import { PiPaintBrushHouseholdThin } from "react-icons/pi";
+import { GiGardeningShears } from "react-icons/gi";
+
+const categories = [
+  {
+    icon: <FaCamera />,
+    jobName: "PhotoGraphy",
+    jobStatus: "Available",
+  },
+  {
+    icon: <PiPaintBrushHouseholdThin />,
+    jobName: "House Keeping",
+    jobStatus: "Available",
+  },
+  {
+    icon: <GiGardeningShears />,
+    jobName: "Gardening",
+    jobStatus: "Available",
+  },
+  // {
+  //   icon: <FaCamera />,
+  //   jobName: "PhotoGraphy",
+  //   jobStatus: "Available",
+  // },
+  // {
+  //   icon: <FaCamera />,
+  //   jobName: "PhotoGraphy",
+  //   jobStatus: "Available",
+  // },
+  // {
+  //   icon: <FaCamera />,
+  //   jobName: "PhotoGraphy",
+  //   jobStatus: "Available",
+  // },
+];
 
 const Category = () => {
   return (

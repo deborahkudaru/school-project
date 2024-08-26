@@ -13,6 +13,10 @@ const Workersignup = () => {
   const [password, setPassword] = useState("");
   const [Fname, setFname] = useState("");
   const [Lname, setLname] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [gender, setGender] = useState("");
+  const [job, setJob] = useState("")
+  const [description, setDescription] = useState("")
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -25,13 +29,18 @@ const Workersignup = () => {
           email: user.email,
           firstName: Fname,
           lastName: Lname,
+          phoneNumber: phoneNumber,
+          gender: gender,
+          job: job,
+          description: description
         });
       }
       console.log("user registered successfully");
+      window.location.href="/worker-profile"
       toast.success("User registered successfully", { position: "top-center" });
     } catch (error) {
       console.log(error.message);
-      toast.success(error.message, { position: "bottom-center" });
+      toast.error(error.message, { position: "bottom-center" });
     }
   };
 
@@ -95,6 +104,16 @@ const Workersignup = () => {
           </div>
           <div className="flex flex-col">
             <div className="flex flex-col pb-6">
+              <label htmlFor="phoneNumber">Phone Number</label>
+              <input
+                type="phoneNumber"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                required
+                className="border border-slate-400 rounded-xl py-2 px-6 outline-0"
+              />
+            </div>
+            <div className="flex flex-col pb-6">
               <label htmlFor="email">Work Email Address</label>
               <input
                 type="email"
@@ -110,6 +129,40 @@ const Workersignup = () => {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                required
+                className="border border-slate-400 rounded-xl py-2 px-6 outline-0"
+              />
+            </div>
+          </div>
+
+          <div>
+            <p className="mt-3 mb-4">Extra information for job seeker</p>
+            <div className="flex flex-col pb-6">
+              <label htmlFor="gender">Gender</label>
+              <input
+                type="gender"
+                value={gender}
+                onChange={(e) => setGender(e.target.value)}
+                required
+                className="border border-slate-400 rounded-xl py-2 px-6 outline-0"
+              />
+            </div>
+            <div className="flex flex-col pb-6">
+              <label htmlFor="job">Job</label>
+              <input
+                type="job"
+                value={job}
+                onChange={(e) => setJob(e.target.value)}
+                required
+                className="border border-slate-400 rounded-xl py-2 px-6 outline-0"
+              />
+            </div>
+            <div className="flex flex-col pb-6">
+              <label htmlFor="description">Describe what you offer</label>
+              <input
+                type="description"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
                 required
                 className="border border-slate-400 rounded-xl py-2 px-6 outline-0"
               />
