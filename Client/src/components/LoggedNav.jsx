@@ -24,7 +24,7 @@ const LoggedNav = () => {
       </li>
       <li>
         <Link
-          to="/worker-signup"
+          to="/apply"
           className="text-slate-500 hover:text-slate-950 transition duration-300"
         >
           Apply
@@ -32,10 +32,10 @@ const LoggedNav = () => {
       </li>
       <li>
         <Link
-          to="/about"
+          to="/post-job"
           className="text-slate-500 hover:text-slate-950 transition duration-300"
         >
-          About us
+          Post a Job
         </Link>
       </li>
     </ul>

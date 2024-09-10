@@ -1,8 +1,11 @@
-import React from "react";
-import { FaStar } from "react-icons/fa";
-import person1 from "../images/sikandar-hayat-aasi-SQdUONdqxJI-unsplash.jpg";
+import React, { useEffect, useState } from "react";
+// import { FaStar } from "react-icons/fa";
+// import person1 from "../images/sikandar-hayat-aasi-SQdUONdqxJI-unsplash.jpg";
 import person2 from "../images/prince-akachi-i2hoD-C2RUA-unsplash.jpg";
 import person3 from "../images/michael-dam-mEZ3PoFGs_k-unsplash.jpg";
+import { Link } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../Firebase";
 
 const talents = [
   {
@@ -29,23 +32,50 @@ const talents = [
 ];
 
 const FindTalent = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const querySnapshot = await getDocs(
+          collection(db, "Users")
+        );
+        const items = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setData(items);
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="bg-gray-50 px-48 pt-5">
-      <h2 className="text-4xl font-bold mt-28 text-center pb-10">Find Talent</h2>
+      <h2 className="text-4xl font-bold mt-28 text-center pb-10">
+        Find Talent
+      </h2>
       <div className=" grid grid-cols-3  gap-3">
-        {talents.map((talent) => (
-          <div className="px-5 pt-5 border-2 border-slate-100 bg-white">
-            <img src={talent.imageUrl} alt="" className="w-64 pb-4" />
-            <p className="text-xs font-bold text-slate-600 bg-white relative left-52 w-7 px-5 rounded">
-              <FaStar className="relative right-4 top-3 text-yellow-400" />{" "}
-              {talent.rating}
-            </p>
-            <p className="text-sm text-slate-500 font-semibold">{talent.job}</p>
-            <p className="text-xl font-bold">{talent.name}</p>
-            <p className="text-sm text-slate-500 font-semibold relative left-44 bottom-10">
-              {talent.age}
-            </p>
-          </div>
+        {data.map((item) => (
+          <Link>
+            <div className="px-5 pt-5 border-2 border-slate-100 bg-white">
+              <img src={item.imageUrl} alt="" className="w-64 pb-4" />
+              {/* <p className="text-xs font-bold text-slate-600 bg-white relative left-52 w-7 px-5 rounded">
+                <FaStar className="relative right-4 top-3 text-yellow-400" />{" "}
+                {.rating}
+              </p> */}
+              <p className="text-sm text-slate-500 font-semibold">
+                {item.job}
+              </p>
+              <p className="text-xl font-bold">{item.firstName} {item.lastName}</p>
+              {/* <p className="text-sm text-slate-500 font-semibold relative left-44 bottom-10">
+                {item.age}
+              </p> */}
+            </div>
+          </Link>
         ))}
       </div>
     </div>

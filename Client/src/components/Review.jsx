@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const reviews = [
   {
+    id: 1,
     imageUrl:
       "https://i.pinimg.com/236x/f2/2c/8c/f22c8c5cf59fe5faf9d466e69cde0ee1.jpg",
     name: "Howard Brown",
@@ -14,6 +15,7 @@ const reviews = [
     date: "26th January, 2024",
   },
   {
+    id: 2,
     imageUrl:
       "https://i.pinimg.com/236x/f2/2c/8c/f22c8c5cf59fe5faf9d466e69cde0ee1.jpg",
     name: "Howard Brown",
@@ -22,6 +24,7 @@ const reviews = [
     date: "26th January, 2024",
   },
   {
+    id: 3,
     imageUrl:
       "https://i.pinimg.com/236x/f2/2c/8c/f22c8c5cf59fe5faf9d466e69cde0ee1.jpg",
     name: "Howard Brown",
@@ -35,7 +38,7 @@ const Review = () => {
   return (
     <div className=" bg-gray-50 grid grid-cols-3 gap-3">
       {reviews.map((review) => (
-        <div className="bg-violet-400 font-semibold text-white pb-10 pt-5 px-6 rounded-tl-3xl rounded-br-3xl shadow-inner">
+        <div className="bg-violet-400 font-semibold text-white pb-10 pt-5 px-6 rounded-tl-3xl rounded-br-3xl shadow-inner" key={review.id}>
           <div className="pb-2">
             <img
               src={review.imageUrl}

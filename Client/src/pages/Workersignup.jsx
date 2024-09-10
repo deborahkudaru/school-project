@@ -6,7 +6,6 @@ import google from "../images/google.png";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../Firebase";
 import { setDoc, doc } from "firebase/firestore";
-import { toast } from "react-toastify";
 
 const Workersignup = () => {
   const [email, setEmail] = useState("");
@@ -15,8 +14,8 @@ const Workersignup = () => {
   const [Lname, setLname] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [gender, setGender] = useState("");
-  const [job, setJob] = useState("")
-  const [description, setDescription] = useState("")
+  const [job, setJob] = useState("");
+  const [description, setDescription] = useState("");
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -32,15 +31,13 @@ const Workersignup = () => {
           phoneNumber: phoneNumber,
           gender: gender,
           job: job,
-          description: description
+          description: description,
         });
       }
       console.log("user registered successfully");
-      window.location.href="/worker-profile"
-      toast.success("User registered successfully", { position: "top-center" });
+      window.location.href = "/worker-profile";
     } catch (error) {
       console.log(error.message);
-      toast.error(error.message, { position: "bottom-center" });
     }
   };
 
@@ -56,12 +53,10 @@ const Workersignup = () => {
           Apply as an employer
         </Link>
       </div>
-
       <div className=" mt-5 w-1/2 m-auto">
         <h2 className="text-4xl font-semibold mb-10  text-center">
           Sign up for Work
         </h2>
-
         <form action="" onSubmit={handleRegister}>
           <div className="flex gap-3">
             <button className="border border-slate-500 font-semibold w-2/3 m-auto pb-3 rounded-lg">
@@ -77,9 +72,7 @@ const Workersignup = () => {
               Continue with Apple
             </button>
           </div>
-
           <p className="py-6 text-center">or</p>
-
           <div className="flex gap-4 pb-6">
             <div className="flex flex-col">
               <label htmlFor="">First Name</label>
@@ -134,7 +127,6 @@ const Workersignup = () => {
               />
             </div>
           </div>
-
           <div>
             <p className="mt-3 mb-4">Extra information for job seeker</p>
             <div className="flex flex-col pb-6">
@@ -159,13 +151,13 @@ const Workersignup = () => {
             </div>
             <div className="flex flex-col pb-6">
               <label htmlFor="description">Describe what you offer</label>
-              <input
+              <textarea
                 type="description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 required
                 className="border border-slate-400 rounded-xl py-2 px-6 outline-0"
-              />
+              ></textarea>
             </div>
           </div>
 

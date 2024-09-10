@@ -1,22 +1,19 @@
 import React from "react";
 import image from "../images/image.jpg";
-import Brands from "./Brands";
-import Howto from "./Howto";
-import Category from "./Category";
-import FindTalent from "./FindTalent";
-import Review from "./Review";
-import Begin from "./Begin";
-import Prefooter from "./Prefooter";
-import Header from "./Header";
+import Brands from "../components/Brands";
+import Category from "../components/Category";
+// import FindTalent from "../components/FindTalent";
+import Prefooter from "../components/Prefooter";
 import { BsStars } from "react-icons/bs";
-import { FaPlayCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import LoggedHead from "../components/LoggedHead";
+import PostedJobs from "../components/PostedJobs";
 
-const Body = () => {
+const WorkerHome = () => {
   return (
-    <div className="">
-      <Header />
-      <div className="px-48 pt-20 pb-5 bg-sky-100">
+    <div className="bg-sky-100">
+      <LoggedHead />
+      <div className="px-48 pt-20 pb-5">
         <div className="flex">
           <div>
             <h1 className="text-5xl font-extrabold leading-tight pb-4">
@@ -38,31 +35,22 @@ const Body = () => {
 
         <>
           <div className="flex gap-3 relative bottom-28">
-            {/* <Link className="text-sky-100 bg-violet-400 px-20 py-3  font-semibold text-sm rounded-md">
+            <Link className="text-sky-100 bg-violet-400 px-20 py-3  font-semibold text-sm rounded-md">
               Search Job{" "}
-            </Link> */}
-
-            {/* <Link className="text-slate-600 border-slate-600 font-semibold border-2 px-12 py-3 text-sm rounded-md">
-              How to apply
             </Link>
-            <FaPlayCircle className="text-slate-900 relative right-44 top-4 text-lg" /> */}
           </div>
         </>
         <Brands />
       </div>
-      <Howto />
+      <h2 className="text-4xl font-bold pt-28 text-center bg-gray-50">Popular Job Categories</h2>
       <Category />
-      {/* <FindTalent /> */}
-      <div className="px-48 bg-gray-50">
-        <h2 className="text-4xl font-bold pt-28 text-center pb-10">
-          See What They Say About Us
-        </h2>
-        <Review />
+      <PostedJobs />
+      {/* <FindTalent className="mb-10"/> */}
+      <div className="px-48 bg-gray-50 ">
       </div>
-      <Begin />
-      {/* <Prefooter /> */}
+      <Prefooter />
     </div>
   );
 };
 
-export default Body;
+export default WorkerHome;

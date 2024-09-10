@@ -14,6 +14,12 @@ import Profile from "./pages/Profile";
 import Home from "./pages/Home";
 import { auth } from "./Firebase";
 import WorkerProfile from "./pages/WorkerProfile";
+import LoggedHome from "./pages/LoggedHome";
+import WorkerHome from "./pages/WorkerHome";
+import PostJob from "./pages/PostJob";
+import PostedJobs from "./components/PostedJobs";
+import Edit from "./components/Edit";
+import Apply from "./pages/Apply";
 
 const App = () => {
   // const [backendData, setBackendData] = useState([{}])
@@ -42,6 +48,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/create-manually" element={<ManualProfile />} />
         <Route path="/login" element={user ? <Navigate to="/profile" /> : <Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/worker-signup" element={<Workersignup />} />
         <Route path="/employer-signup" element={<Employersignup />} />
@@ -49,6 +56,12 @@ const App = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/home" element={<Home />} />
         <Route path="/worker-profile" element={<WorkerProfile />} />
+        <Route path="/logged-home" element={<LoggedHome />} />
+        <Route path="/worker-home" element={< WorkerHome/>} />
+        <Route path="/post-job" element={< PostJob/>} />
+        <Route path="/posted-jobs" element={< PostedJobs/>} />
+        <Route path="/edit" element={<Edit />} />
+        <Route path="/apply" element={<Apply />} />
       </Routes>
       <ToastContainer />
       <Footer />

@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { IoIosNotificationsOutline } from "react-icons/io";
+import { auth } from "../Firebase";
+import { Link } from "react-router-dom";
 
 const Noti = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,6 +9,16 @@ const Noti = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  async function handleLogout() {
+    try {
+      await auth.signOut();
+      window.location.href = "/login";
+      console.log("user logged out successfully");
+    } catch (error) {
+      console.error("error loggint out", error.message);
+    }
+  }
 
   return (
     <div className="relative inline-block text-left">
@@ -16,7 +28,7 @@ const Noti = () => {
           className="inline-flex justify-center w-full rounded-md text-sm font-medium text-gray-700 hover:text-black focus:outline-none"
           onClick={toggleDropdown}
         >
-          <IoIosNotificationsOutline className='text-2xl'/>
+          <IoIosNotificationsOutline className="text-2xl" />
           <svg
             className="-mr-1 ml-2 h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
@@ -42,26 +54,21 @@ const Noti = () => {
         >
           <div className="py-1" role="none">
             <a
+              href="/dasboard"
+              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+              role="menuitem"
+            >
+              Dashboard
+            </a>
+            <Link to="/dashboard"  className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100">Edit profile</Link>
+            <button
+              onClick={handleLogout}
               href="#"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
               role="menuitem"
             >
-              Account settings
-            </a>
-            <a
-              href="#"
-              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-              role="menuitem"
-            >
-              Support
-            </a>
-            <a
-              href="#"
-              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-              role="menuitem"
-            >
-              Sign out
-            </a>
+              Logout
+            </button>
           </div>
         </div>
       )}
@@ -70,4 +77,3 @@ const Noti = () => {
 };
 
 export default Noti;
-

@@ -6,7 +6,6 @@ import google from "../images/google.png";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../Firebase";
 import { setDoc, doc } from "firebase/firestore";
-// import { toast } from "react-toastify";
 
 const Employersignup = () => {
   const [email, setEmail] = useState("");
@@ -14,7 +13,6 @@ const Employersignup = () => {
   const [Fname, setFname] = useState("");
   const [Lname, setLname] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [gender, setGender] = useState("");
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -23,7 +21,7 @@ const Employersignup = () => {
       const user = auth.currentUser;
       console.log(user);
       if (user) {
-        await setDoc(doc(db, "Users", user.uid), {
+        await setDoc(doc(db, "Employers", user.uid), {
           email: user.email,
           firstName: Fname,
           lastName: Lname,

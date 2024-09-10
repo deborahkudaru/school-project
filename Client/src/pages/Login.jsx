@@ -5,30 +5,23 @@ import { FaApple } from "react-icons/fa";
 import google from "../images/google.png";
 import { FaRegUser } from "react-icons/fa";
 import { FiLock } from "react-icons/fi";
-// import auth from "../Firebase";
 import { auth } from "../Firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
-// import { toast } from "react-toastify";
-// import { redirect } from "react-router-dom";
 
-const Apply = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
       console.log("user logged in successfully");
-      window.location.href = "/profile"
-
+      window.location.href = "/profile";
     } catch (error) {
       console.log(error.message);
     }
   };
-
-  
-
   return (
     <div className="px-48 pt-6 bg-gray-50 pb-10">
       <Logo />
@@ -94,4 +87,4 @@ const Apply = () => {
   );
 };
 
-export default Apply;
+export default Login;
