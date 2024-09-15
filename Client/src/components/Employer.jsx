@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Employer = () => {
   return (
@@ -14,12 +14,11 @@ const Employer = () => {
       <label htmlFor="">Work Email Address</label>
       <input type="text" />
       <label htmlFor="">Password</label>
-      <input type="text" placeholder='Password (8 or more characters)'/>
+      <input type="text" placeholder="Password (8 or more characters)" />
 
       <button>Create my account</button>
     </div>
+  );
+};
 
-  )
-}
-
-export default Employer
+export default Employer;

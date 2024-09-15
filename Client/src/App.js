@@ -47,7 +47,7 @@ const App = () => {
         <Route path="/" element={<Body />} />
         <Route path="/about" element={<About />} />
         <Route path="/create-manually" element={<ManualProfile />} />
-        <Route path="/login" element={user ? <Navigate to="/profile" /> : <Login />} />
+        {/* <Route path="/login" element={user ? <Navigate to="/profile" /> : <Login />} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/worker-signup" element={<Workersignup />} />

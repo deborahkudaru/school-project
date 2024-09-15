@@ -45,7 +45,7 @@ const Profile = () => {
   return (
     <>
       {" "}
-      <div className=" bg-sky-100">
+      <div className=" bg-gray-100">
         <LoggedHead />
         <div className="px-48 pt-20">
           <h1>Profile Photo</h1>
