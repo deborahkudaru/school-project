@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
-    <div className="px-48 pt-6 bg-gray-50">
+    <div className="lg:px-48 px-10 pt-6 bg-gray-50">
       <Logo />
       <div className="mt-16 w-1/2 m-auto text-center">
-        <h2 className="text-3xl font-bold">
+        <h2 className="lg:text-3xl text-xl font-bold">
           Join as an Employer or Worker
         </h2>
-        <div className="flex gap-5 text-3xl my-10 text-violet-500">
+        <div className="grid lg:grid-cols-2 gap-5 lg:text-3xl  text-xl my-10 text-violet-500">
           <Link
             to="/employer-signup"
             className="border-2 border-violet-400 px-6 py-12 rounded-xl hover:bg-violet-400 hover:text-gray-50"
@@ -24,7 +24,7 @@ const SignUp = () => {
             Join as a worker
           </Link>
         </div>
-        <p className="pb-10">
+        <p className="pb-10 text-sm lg:text-base">
           Already have an account?{" "}
           <Link to="/login" className="text-violet-600 underline underline-offset-1">
             Log in
