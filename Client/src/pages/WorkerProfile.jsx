@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { IoReload } from "react-icons/io5";
 import { IoFilterOutline } from "react-icons/io5";
 import { CiSettings } from "react-icons/ci";
+import AllApplied from "../components/AllApplied";
 
 const WorkerProfile = () => {
   const [userDetails, setUserDetails] = useState(null);
@@ -41,17 +42,20 @@ const WorkerProfile = () => {
   }, []);
 
   return (
-    <div className="flex">
+    <div className="flex gap-3">
       <div className="bg-gray-50">
         <SideMenu />
       </div>
-      <div className="px-10 bg-gray-50">
+      <div
+        className="bg-gray-50 
+      "
+      >
         <ProfileTop />
         <div>
           {userDetails ? (
             <div>
               <p className="border-t-2 mb-5"></p>
-              <div className="flex justify-between mb-5">
+              <div className="flex justify-between mb-5 pr-6">
                 <div>
                   <h1 className="text-2xl font-semibold">{userDetails.job}</h1>
                   <p className="text-lg text-gray-600 font-semibold">
@@ -64,30 +68,30 @@ const WorkerProfile = () => {
                   <Link className="p-0 mt-3">Export Report</Link>
                 </div>
               </div>
-
-              <div>
-                <div className="flex justify-between mb-5">
-                  <div className="flex bg-gray-100 border rounded-lg gap-5 py-2 px-2 font-semibold text-slate-500">
-                    <Link className="">All Applied</Link>
-                    <Link>Scheduled Interview</Link>
-                    <Link>Draft Applied</Link>
-                  </div>
-                  <div className="flex gap-2">
-                    <button className="flex gap-2 border border-slate-300 rounded-lg py-2 px-3">
-                      <IoReload className="relative top-1 text-xl" />
-                      History Works
-                    </button>
-                    <button className="flex gap-2 border border-slate-300 rounded-lg py-2 px-3">
-                      <IoFilterOutline className="relative top-1 text-xl" />
-                      Filter
-                    </button>
-                    <button className="flex gap-2 border border-slate-300 rounded-lg py-2 px-3">
-                      <CiSettings className="text-2xl" />
-                      Setting Page
-                    </button>
-                  </div>
+              <div className="flex justify-between mb-5 pr-6">
+                <div className="flex bg-gray-100 border rounded-lg gap-5 py-2 px-2 font-semibold text-slate-500">
+                  <Link className="">All Applied</Link>
+                  <Link>Scheduled Interview</Link>
+                  <Link>Draft Applied</Link>
                 </div>
-                <div className="">
+                <div className="flex gap-2">
+                  <button className="flex gap-2 border border-slate-300 rounded-lg py-2 px-3">
+                    <IoReload className="relative top-1 text-xl" />
+                    History Works
+                  </button>
+                  <button className="flex gap-2 border border-slate-300 rounded-lg py-2 px-3">
+                    <IoFilterOutline className="relative top-1 text-xl" />
+                    Filter
+                  </button>
+                  <button className="flex gap-2 border border-slate-300 rounded-lg py-2 px-3">
+                    <CiSettings className="text-2xl" />
+                    Setting Page
+                  </button>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <AllApplied />
+                <div className="border rounded-t-xl">
                   <div className="bg-gradient-to-r from-sky-300 to-violet-400 rounded-t-xl text-center py-10">
                     <p className="text-gray-50 text-4xl font-bold mb-3">
                       {userDetails.job}
@@ -96,96 +100,77 @@ const WorkerProfile = () => {
                       Select the best employee candidate for your team
                     </p>
                   </div>
-                  <img
-                    src=""
-                    alt=""
-                    className="border border-gray-500 w-32 h-32 rounded-full relative bottom-7 left-5"
-                  />
-                  <div className="flex justify-between relative bottom-3">
-                    <div>
-                      <h3 className="text-2xl font-bold">
-                        {userDetails.firstName} {userDetails.lastName}
-                      </h3>
-                      <p className="text-lg text-gray-600">
-                        I am a Software Engineer based in Nigeria
-                      </p>
-                    </div>
-                    <button className="text-gray-50 bg-violet-400 px-1 text-lg font-semibold rounded-md">
-                      Schedule Interview
-                    </button>
-                  </div>
-                  <p className="border w-full"></p>
-                  <div className="mt-10 flex">
-                    <div>
-                      <div className="inline-block">
-                        <h3 className="text-2xl text-violet-500 font-semibold pb-2">
-                          Description
+
+                  <div className="px-5">
+                    <img
+                      src=""
+                      alt=""
+                      className="border border-gray-500 w-32 h-32 rounded-full relative bottom-7"
+                    />
+
+                    <div className="flex justify-between relative bottom-3">
+                      <div>
+                        <h3 className="text-2xl font-bold">
+                          {userDetails.firstName} {userDetails.lastName}
                         </h3>
-                        <p className="text-slate-500 font-medium mb-10">
-                          {userDetails.description}
+                        <p className="text-lg text-gray-600">
+                          I am a Software Engineer based in Nigeria
                         </p>
+                      </div>
+                      <button className="text-gray-50 bg-violet-400 px-1 text-lg font-semibold rounded-md">
+                        Schedule Interview
+                      </button>
+                    </div>
+                    <p className="border w-full"></p>
+                    <div className="mt-10 flex">
+                      <div>
+                        <div className="inline-block">
+                          <h3 className="text-2xl text-violet-500 font-semibold pb-2">
+                            Description
+                          </h3>
+                          <p className="text-slate-500 font-medium mb-10">
+                            {userDetails.description}
+                          </p>
+                        </div>
+                        <div>
+                          <h3 className="text-2xl text-violet-500 font-semibold pb-2">
+                            Experience
+                          </h3>
+                        </div>
                       </div>
                       <div>
                         <h3 className="text-2xl text-violet-500 font-semibold pb-2">
-                          Experience
+                          Overview
                         </h3>
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-2xl text-violet-500 font-semibold pb-2">
-                        Overview
-                      </h3>
-                      <div className="border px-20 py-10">
-                        <div>
-                          <div className="flex gap-2">
-                            <AiOutlineUsergroupAdd className="bg-gray-200 text-2xl" />
-                            <p>Applied for</p>
+                        <div className="border px-20 py-10">
+                          <div>
+                            <div className="flex gap-2">
+                              <AiOutlineUsergroupAdd className="bg-gray-200 text-2xl" />
+                              <p>Applied for</p>
+                            </div>
+                            <h4 className="text-xl">{userDetails.job}</h4>
                           </div>
-                          <h4 className="text-xl">{userDetails.job}</h4>
-                        </div>
-                        <div>
-                          <div className="flex gap-2">
-                            <SlCalender className="bg-gray-200 text-2xl" />
-                            <p>Application Date</p>
+                          <div>
+                            <div className="flex gap-2">
+                              <SlCalender className="bg-gray-200 text-2xl" />
+                              <p>Application Date</p>
+                            </div>
+                            <h4 className="text-2xl"></h4>
                           </div>
-                          <h4 className="text-2xl"></h4>
-                        </div>
-                        <div>
-                          <div className="flex gap-2">
-                            <IoBriefcaseOutline className="bg-gray-200 text-2xl" />
-                            <p>Experience</p>
+                          <div>
+                            <div className="flex gap-2">
+                              <IoBriefcaseOutline className="bg-gray-200 text-2xl" />
+                              <p>Experience</p>
+                            </div>
+                            <h4 className="text-2xl"></h4>
                           </div>
-                          <h4 className="text-2xl"></h4>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="mt-5">
-                  <div className="flex gap-20">
-                    {/* <div className="w-1/2">
-                      <p className="text-slate-500 font-medium mb-2">
-                        {" "}
-                        Please send me a message below and I will get back to
-                        you as soon as possible👇👇👇
-                      </p>
-                      <form action="">
-                        <textarea
-                          name=""
-                          id=""
-                          rows={5}
-                          cols={40}
-                          className="px-3 py-3 mb-5 border-violet-500 outline-0 text-slate-500"
-                        ></textarea>
-                        <button
-                          type="submit"
-                          className="text-sky-100 bg-violet-400 px-10 py-3  font-semibold text-sm rounded-md mb-5"
-                        >
-                          Send Message
-                        </button>
-                      </form>
-                    </div> */}
-
+                  {/* <div className="flex gap-20">
                     <div className="flex flex-col gap-5 pb-10">
                       <p className="text-slate-500 font-medium">
                         Phone:{" "}
@@ -209,7 +194,7 @@ const WorkerProfile = () => {
                         </span>
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div>
                   <div className="flex gap-5 text-2xl"></div>

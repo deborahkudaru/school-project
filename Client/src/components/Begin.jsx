@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 const Begin = () => {
   return (
-    <div className="px-48 pt-40 bg-gray-50 pb-20">
-      <div className="flex gap-10">
-        <img src={picture} alt="normal-stuff" className="w-1/2" />
+    <div className="lg:px-48 px-10 lg:pt-40 pt-20 bg-gray-50 pb-20">
+      <div className="flex lg:flex-row flex-col-reverse gap-10">
+        <img src={picture} alt="normal-stuff" className="lg:w-1/2" />
         <div>
-          <h2 className="text-4xl font-bold mb-5">
+          <h2 className="lg:text-4xl text-2xl font-bold lg:mb-5 mb-2">
             Begin Your New Journey With Us
           </h2>
-          <p className="font-semibold text-slate-500 pb-8">
+          <p className="font-semibold text-slate-500 text-sm lg:text-base pb-8">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis,
             quae! Expedita cupiditate quo, excepturi quaerat similique ad
             dignissimos, id ipsa repellat saepe nostrum ex omnis nulla

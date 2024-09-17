@@ -81,7 +81,7 @@ const Workersignup = () => {
                 value={Fname}
                 onChange={(e) => setFname(e.target.value)}
                 required
-                className="border border-slate-400 rounded-xl py-2 px-6 outline-0"
+                className="border border-slate-400 rounded-xl py-2 px-6 outline-0 bg-gray-50"
               />
             </div>
             <div className="flex flex-col">
@@ -91,7 +91,7 @@ const Workersignup = () => {
                 value={Lname}
                 onChange={(e) => setLname(e.target.value)}
                 required
-                className="border border-slate-400 rounded-xl px-6 py-2 outline-0"
+                className="border border-slate-400 rounded-xl px-6 py-2 outline-0 bg-gray-50"
               />
             </div>
           </div>
@@ -103,7 +103,7 @@ const Workersignup = () => {
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 required
-                className="border border-slate-400 rounded-xl py-2 px-6 outline-0"
+                className="border border-slate-400 rounded-xl py-2 px-6 outline-0 bg-gray-50"
               />
             </div>
             <div className="flex flex-col pb-6">
@@ -113,7 +113,7 @@ const Workersignup = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="border border-slate-400 rounded-xl py-2 px-6 outline-0"
+                className="border border-slate-400 rounded-xl py-2 px-6 outline-0 bg-gray-50"
               />
             </div>
             <div className="flex flex-col pb-6">
@@ -123,7 +123,7 @@ const Workersignup = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="border border-slate-400 rounded-xl py-2 px-6 outline-0"
+                className="border border-slate-400 rounded-xl py-2 px-6 outline-0 bg-gray-50"
               />
             </div>
           </div>
@@ -136,7 +136,7 @@ const Workersignup = () => {
                 value={gender}
                 onChange={(e) => setGender(e.target.value)}
                 required
-                className="border border-slate-400 rounded-xl py-2 px-6 outline-0"
+                className="border border-slate-400 rounded-xl py-2 px-6 outline-0 bg-gray-50"
               />
             </div>
             <div className="flex flex-col pb-6">
@@ -146,7 +146,7 @@ const Workersignup = () => {
                 value={job}
                 onChange={(e) => setJob(e.target.value)}
                 required
-                className="border border-slate-400 rounded-xl py-2 px-6 outline-0"
+                className="border border-slate-400 rounded-xl py-2 px-6 outline-0 bg-gray-50"
               />
             </div>
             <div className="flex flex-col pb-6">
@@ -156,7 +156,7 @@ const Workersignup = () => {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 required
-                className="border border-slate-400 rounded-xl py-2 px-6 outline-0"
+                className="border border-slate-400 rounded-xl py-2 px-6 outline-0 bg-gray-50"
               ></textarea>
             </div>
           </div>

@@ -3,10 +3,10 @@ import form from "../images/form.png";
 
 const Howto = () => {
   return (
-    <div className="px-48 pt-20 bg-gray-50">
-      <div className="flex gap-10  -z-50">
-        <div className="w-2/3">
-          <h2 className="text-4xl font-bold w-3/4">
+    <div className="lg:px-48 px-10 pt-20 bg-gray-50">
+      <div className="flex lg:flex-row flex-col gap-10  -z-50">
+        <div className="lg:w-2/3">
+          <h2 className="lg:text-4xl text-2xl font-bold lg:w-3/4">
             How It's Work Creative Jobs & Quickly Feature
           </h2>
 
@@ -60,7 +60,7 @@ const Howto = () => {
         </div> */}
         </div>
       </div>
-      <h2 className="text-4xl font-bold mt-28 text-center">Popular Job Categories</h2>
+      <h2 className="lg:text-4xl text-2xl font-bold mt-28 text-center">Popular Job Categories</h2>
     </div>
   );
 };

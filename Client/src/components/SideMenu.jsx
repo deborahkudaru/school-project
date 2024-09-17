@@ -14,9 +14,9 @@ const SideMenu = () => {
   return (
     <div className="bg-neutral-900 border text-gray-200 font-light flex flex-col gap-8 w-full px-10 pb-80 pt-5">
       <WorkerLogo />
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         <p>MAIN MENU</p>
-        <div className="flex gap-2 hover:text-violet-400">
+        <div className="flex hover:text-violet-400">
           <RxDashboard className="relative top-1" />
           <Link>Dashboard</Link>
         </div>
@@ -33,7 +33,7 @@ const SideMenu = () => {
           <Link>Role Job</Link>
         </div>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         <p>OTHERS</p>
         <div className="flex gap-2 hover:text-violet-400">
           <LuUsers className="relative top-1" />
@@ -44,7 +44,7 @@ const SideMenu = () => {
           <Link>Schedule</Link>
         </div>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         <p>PREFERENCES</p>
         <div className="flex gap-2 hover:text-violet-400">
           <GoQuestion className="relative top-1" />

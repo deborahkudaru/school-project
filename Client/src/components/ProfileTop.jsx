@@ -7,7 +7,7 @@ import { IoShareSocialOutline } from "react-icons/io5";
 
 const ProfileTop = () => {
   return (
-    <div className="flex justify-between my-5">
+    <div className="flex justify-between my-5 pr-6">
       <div className="border border-gray-300 flex gap-2 pl-5 pr-14 py-1 rounded-lg">
         <BiSearch className="relative top-1 text-gray-500 text-xl" />
         <input type="text" placeholder="Search now..." className="bg-gray-50 pr-16"/>
@@ -18,7 +18,6 @@ const ProfileTop = () => {
         <button><IoIosInformationCircleOutline className="text-3xl text-gray-600"/></button>
         <button><IoIosNotificationsOutline className="text-3xl text-gray-600"/></button>
       </div>
-      {/* <p className="border"></p> */}
     </div>
   );
 };

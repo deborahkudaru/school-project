@@ -16,7 +16,7 @@ const NavLinks = () => {
       </li>
       <li>
         <Link
-          to="/home"
+          to="/"
           className="text-slate-500 hover:text-slate-950 transition duration-300"
         >
           Category
@@ -70,7 +70,7 @@ const Navbar = () => {
         <div className="w-full justify-between hidden  md:flex">
           <NavLinks />
         </div>
-        <div className="md:hidden text-rose-500">
+        <div className="md:hidden text-violet-400">
           <button onClick={toggleNavbar} className="object-right">
             {isOpen ? <X /> : <RiMenu3Fill className="text-4xl" />}
           </button>
@@ -81,7 +81,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/about"
-              className="text-slate-400  hover:text-rose-500 transition duration-300"
+              className="text-slate-400  hover:text-violet-400 transition duration-300"
             >
               About
             </Link>
@@ -89,7 +89,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/experience"
-              className="text-slate-400 hover:text-rose-500 transition duration-300"
+              className="text-slate-400 hover:text-violet-400 transition duration-300"
             >
               Experience
             </Link>
@@ -97,7 +97,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/project"
-              className="text-slate-400 hover:text-rose-500 transition duration-300"
+              className="text-slate-400 hover:text-violet-400 transition duration-300"
             >
               Project
             </Link>
@@ -105,7 +105,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/contact"
-              className="text-slate-400 hover:text-rose-500 transition duration-300"
+              className="text-slate-400 hover:text-violet-400 transition duration-300"
             >
               Contact
             </Link>

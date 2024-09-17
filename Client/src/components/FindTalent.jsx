@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import { FaStar } from "react-icons/fa";
-// import person1 from "../images/sikandar-hayat-aasi-SQdUONdqxJI-unsplash.jpg";
 import person2 from "../images/prince-akachi-i2hoD-C2RUA-unsplash.jpg";
 import person3 from "../images/michael-dam-mEZ3PoFGs_k-unsplash.jpg";
 import { Link } from "react-router-dom";

@@ -76,7 +76,7 @@ const Employersignup = () => {
                 value={Fname}
                 onChange={(e) => setFname(e.target.value)}
                 required
-                className="border border-slate-400 rounded-xl px-6 py-2 outline-0"
+                className="border border-slate-400 rounded-xl px-6 py-2 outline-0 bg-gray-50"
               />
             </div>
             <div className="flex flex-col">
@@ -86,7 +86,7 @@ const Employersignup = () => {
                 value={Lname}
                 onChange={(e) => setLname(e.target.value)}
                 required
-                className="border border-slate-400 rounded-xl px-6 py-2 outline-0"
+                className="border border-slate-400 rounded-xl px-6 py-2 outline-0 bg-gray-50"
               />
             </div>
           </div>
@@ -98,7 +98,7 @@ const Employersignup = () => {
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 required
-                className="border border-slate-400 rounded-xl py-2 outline-0 px-6"
+                className="border border-slate-400 rounded-xl py-2 outline-0 px-6 bg-gray-50"
               />
             </div>
             <div className="flex flex-col pb-6">
@@ -108,7 +108,7 @@ const Employersignup = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="border border-slate-400 rounded-xl py-2 outline-0 px-6"
+                className="border border-slate-400 rounded-xl py-2 outline-0 px-6 bg-gray-50"
               />
             </div>
             <div className="flex flex-col pb-6">
@@ -118,7 +118,7 @@ const Employersignup = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="border border-slate-400 rounded-xl py-2 outline-0 px-6"
+                className="border border-slate-400 rounded-xl py-2 outline-0 px-6 bg-gray-50"
                 placeholder=""
               />
             </div>
